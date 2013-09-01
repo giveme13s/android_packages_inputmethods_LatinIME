@@ -357,7 +357,7 @@ public final class SettingsValues {
                     autoCorrectionThreshold = Float.MAX_VALUE;
                 } else if (FLOAT_NEGATIVE_INFINITY_MARKER_STRING.equals(val)) {
                     autoCorrectionThreshold = Float.NEGATIVE_INFINITY;
-                } else {
+                } else if (val != null && !val.isEmpty()) {
                     autoCorrectionThreshold = Float.parseFloat(val);
                 }
             } else {
